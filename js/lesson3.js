@@ -496,15 +496,385 @@
 // console.log(add(12, 4, 11, 48));
 
 //--------3-33------
-// Пиши код ниже этой строки
-function findMatches(array1, ...array2) {
-  const matches = []; // Не изменяй эту строку
-  for (const el of array2) {
-    if (array1.includes(el)) {
-      matches.push(el);
-    }
+// // Пиши код ниже этой строки
+// function findMatches(array1, ...array2) {
+//   const matches = []; // Не изменяй эту строку
+//   for (const el of array2) {
+//     if (array1.includes(el)) {
+//       matches.push(el);
+//     }
+//   }
+//   // Пиши код выше этой строки
+//   return matches;
+// }
+// console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+
+//--------3-34------
+// const bookShelf = {
+//   // Пиши код ниже этой строки
+//   books: ["Последнее королевство", "Страж снов"],
+//   getBooks() {
+//     return "Возвращаем все книги";
+//   },
+//   addBook(bookName) {
+//     return `Добавляем книгу ${bookName}`;
+//   },
+//   removeBook(bookName) {
+//     return `Удаляем книгу ${bookName}`;
+//   },
+//   updateBook(oldName, newName) {
+//     return `Обновляем книгу ${oldName} на ${newName}`;
+//   },
+
+//   // Пиши код выше этой строки
+// };
+// console.log(bookShelf.updateBook("Пески Дюны", "Дюна"));
+
+//--------3-35--
+// const bookShelf = {
+//   books: ["Последнее королевство", "Мгла", "Страж снов"],
+//   updateBook(oldName, newName) {
+//     // Пиши код ниже этой строки
+//     const bookIndex = this.books.indexOf(oldName);
+//     console.log(oldName);
+//     console.log(bookIndex);
+
+//     this.books.splice(bookIndex, 1, newName);
+//     console.log(bookShelf.books);
+//     // Пиши код выше этой строки
+//   },
+// };
+// console.log(bookShelf.updateBook("Мгла", "Хроники подземелий"));
+
+//--------3-36----
+// const atTheOldToad = {
+//   // Пиши код ниже этой строки
+//   potions: [],
+//   // Пиши код выше этой строки
+// };
+// console.log(atTheOldToad.potions);
+
+// //-3-37-------
+// const atTheOldToad = {
+//   // Пиши код ниже этой строки
+//   potions: ["Зелье скорости", "Дыхание дракона", "Каменная кожа"],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   // Пиши код выше этой строки
+// };
+// console.log(atTheOldToad.getPotions());
+
+//-----3-39--
+// const atTheOldToad = {
+//   potions: ["Зелье скорости", "Дыхание дракона", "Каменная кожа"],
+//   removePotion(potionName) {
+//     // Пиши код ниже этой строки
+//     const findFn = this.potions.indexOf(potionName);
+//     console.log(findFn);
+//     return this.potions.splice(findFn, 1);
+//     // Пиши код выше этой строки
+//   },
+// };
+// console.log(atTheOldToad.removePotion("Зелье скорости"));
+
+//----3-40-
+// const atTheOldToad = {
+//   potions: ["Зелье скорости", "Дыхание дракона", "Каменная кожа"],
+//   updatePotionName(oldName, newName) {
+//     // Пиши код ниже этой строки
+//     const findIndex = this.potions.indexOf(oldName);
+//     console.log(findIndex);
+//     return this.potions.splice(findIndex, 1, newName);
+
+//     // Пиши код выше этой строки
+//   },
+// };
+// console.log(atTheOldToad.updatePotionName("Дыхание дракона", "Полиморф"));
+// console.log(atTheOldToad);
+
+//-----3-41-
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Зелье скорости", price: 460 },
+//     { name: "Дыхание дракона", price: 780 },
+//     { name: "Каменная кожа", price: 520 },
+//   ],
+//   // Пиши код ниже этой строки
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) {
+//       if (potion.name === newPotion.name) {
+//         console.log(`Зелье ${newPotion.name} уже есть в инвентаре!`);
+//         return;
+//       }
+//     }
+
+//     return this.potions.push(newPotion);
+//   },
+
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       let potion = this.potions[i];
+//       if (potion.name === potionName) {
+//         return this.potions.splice(i, 1);
+//       }
+//     }
+//     return `Зелья ${potionName.name} нет в инвентаре!`;
+//   },
+
+//   updatePotionName(oldName, newName) {
+//     for (const value of this.potions) {
+//       if (value.name === oldName) {
+//         value.name = newName;
+//       }
+//     }
+//     return `Зелья ${oldName} нет в инвентаре!`;
+//   },
+// };
+// console.log(atTheOldToad.addPotion({ name: "Зелье силы", price: 270 }));
+// console.log(atTheOldToad.removePotion("Каменная кожа"));
+// console.log(atTheOldToad.updatePotionName("Дыхание дракона", "Полиморф"));
+// console.log(atTheOldToad.potions);
+
+// Пиши код выше этой строки
+
+//____________________________________________________________________________________
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+// };
+// console.log(hotel);
+// delete hotel.name;
+// console.log(hotel); // {stars: 5, capacity: 100}
+
+// delete hotel["stars"];
+// console.log(hotel); // {capacity: 100}
+
+//====================
+// const key = "person";
+// const getKey = function () {
+//   return "age";
+// };
+
+// // Computed properties
+// const object = {
+//   [key]: "Mango",
+//   [getKey()]: 2,
+// };
+
+// console.log(object); // {person: 'Mango', age: 2}
+
+//====================
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// hotel.greet = function () {
+//   console.log("Welcome!");
+// };
+
+// hotel.greet(); // Welcome!
+
+//====================
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+//   showName() {
+//     console.log(this.name);
+//   },
+//   changeCapacity() {
+//     this.capacity = 200;
+//   },
+// };
+
+// hotel.showName(); // Resort Hotel
+
+// hotel.changeCapacity(200);
+// console.log(hotel.capacity); // 200
+// console.log(hotel.name);
+
+//==========================
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// // Перебор ключей объекта hotel
+// for (const key in hotel) {
+//   console.log("Key: ", key);
+// }
+
+// /*
+//  * Key: name
+//  * Key: stars
+//  * Key: capacity
+//  */
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// for (const key in hotel) {
+//   console.log("Value: ", hotel[key]);
+// }
+
+// /*
+//  * Value: "Resort Hotel"
+//  * Value: 5
+//  * Value: 100
+//  */
+
+//=======================
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// const keys = Object.keys(hotel); // ["name", "stars", "capacity"]
+// console.log(Object.keys(hotel));
+// const values = Object.values(hotel); // ["Resort Hotel", 5, 100]
+// console.log(Object.values(hotel));
+// const entries = Object.entries(hotel); // [Array(2), Array(2), Array(2)]
+// console.table(Object.entries(hotel));
+
+// const hotel = {
+//   name: "Resort Hotel",
+//   stars: 5,
+//   capacity: 100,
+// };
+
+// /*
+//  * Посмотрите в консоли из каких двух элементов состоит каждый подмассив.
+//  * Первый элемент это ключ свойства, второй это значение.
+//  */
+// const entries = Object.entries(hotel);
+// console.log(entries);
+
+// /*
+//  * На каждой итерации по entries выберем первый элемент подмассива (ключ)
+//  * в переменную key, а второй (значение) в переменную value
+//  */
+// for (const entry of entries) {
+//   const key = entry[0];
+//   const value = entry[1];
+
+//   console.log(`${entry[0]}: ${value}`);
+// }
+
+/*
+ * name: Resort Hotel
+ * stars: 5
+ * capacity: 100
+ */
+
+//++++++++++++
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tennis",
+//   premium: true,
+// };
+
+// function changeUser(obj) {
+//   obj.mood = "happy";
+//   obj.hobby = "skydiving";
+//   obj.premium = false;
+//   const fn = Object.keys(obj);
+//   for (const key of fn) {
+//     console.log(`${key}:${obj[key]}`);
+//   }
+
+//   return obj;
+// }
+
+// console.log(changeUser(user));
+
+// //++++++++++++++
+// // 2) У нас есть объект, в котором хранятся
+// // зарплаты нашей команды.
+// // Напишите код для суммирования всех зарплат
+// // и сохраните результат в переменной sum.
+// // Должно получиться 390.
+// // Если объект salaries пуст, то результат должен быть 0.
+
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// console.log(typeof null);
+
+// // falsy values - undefined, null, "", 0, NaN
+
+// function sumSalaries(objSalaries) {
+//   if (!sumSalaries) {
+//     return 0;
+//   }
+//   console.log(objSalaries);
+//   let sum = 0;
+//   for (const el of Object.values(objSalaries)) {
+//     sum += el;
+//   }
+//   return sum;
+// }
+// console.log(sumSalaries(salaries));
+
+//+++++++++++++++++++++
+// 3) Напишите ф-цию calcTotalPrice(stones, stoneName),
+// которая принимает массив
+// обьектов и строку с названием камня.
+// Ф-ция считает и возвращает общую стоимость
+// камней с таким именем, ценой и количеством из
+// обьекта
+
+const stones = [
+  { name: "Изумруд", price: 1300, quantity: 4 },
+  { name: "Бриллиант", price: 2700, quantity: 3 },
+  { name: "Сапфир", price: 400, quantity: 7 },
+  { name: "Щебень", price: 200, quantity: 2 },
+  { name: "Щебень", price: 200, quantity: 2 },
+  { name: "Щебень", price: 200, quantity: 2 },
+];
+
+function calcTotalPrice(stones, stoneName) {
+  let sum = 0;
+  for (const el of stones) {
+    if (stones["name"] === stoneName) sum += el["price"] * el["quantity"];
   }
-  // Пиши код выше этой строки
-  return matches;
+  // return sum;
+  console.log(sum);
 }
-console.log(findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41));
+// console.log(calcTotalPrices(stones, "Щебень"));
+//разница rest, this, когда применять
+
+// 5) Напишите функцию, которая принимает
+// объект и возвращает
+// новый объект без указанного параметра
+
+// Ожидаемый результат - ({ a: 1, b: 2 }, 'b') => { a: 1 }
+
+const updateObj = (obj, ...removeKeys) => {
+  let newObj = { ...obj };
+  console.log(obj);
+  console.log(removeKeys);
+  for (const key of removeKeys) {
+    console.log(key);
+    console.log(newObj[key]);
+    delete newObj[key];
+  }
+
+  return newObj;
+};
+
+console.log(updateObj({ a: 1, b: 2, c: 3 }, "b", "a", "g"));
