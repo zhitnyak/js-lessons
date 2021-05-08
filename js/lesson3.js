@@ -856,7 +856,6 @@ function calcTotalPrice(stones, stoneName) {
   console.log(sum);
 }
 // console.log(calcTotalPrices(stones, "Щебень"));
-//разница rest, this, когда применять
 
 // 5) Напишите функцию, которая принимает
 // объект и возвращает
@@ -873,7 +872,6 @@ const updateObj = (obj, ...removeKeys) => {
     console.log(newObj[key]);
     delete newObj[key];
   }
-
   return newObj;
 };
 

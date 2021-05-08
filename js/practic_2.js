@@ -1,4 +1,4 @@
-let arr = ["Ivan", "Lyalya", "Ishtvan", "Olya"];
+// let arr = ["Ivan", "Lyalya", "Ishtvan", "Olya"];
 // const newArr = [];
 // console.log(arr.length);
 // newArr.push(...arr, "Pit");
@@ -16,25 +16,25 @@ let arr = ["Ivan", "Lyalya", "Ishtvan", "Olya"];
 //   }
 // }
 // console.log(newArr);
-const addArray = function (baseArray, newEl, findName, changeName) {
-  console.log(baseArray, newEl, findName, changeName);
 
-  const newArray = [...baseArray, newEl];
-  console.log(findName, changeName);
-  console.log(newArray);
-  let a = newArray.indexOf(findName);
-  console.log(a);
-  if (a >= 0) {
-    console.log(a);
-    newArray.splice(a, 1, changeName);
-  } else {
-    console.log("nema nixto");
-  }
-  return newArray;
-};
+// const addArray = function (baseArray, newEl, findName, changeName) {
+//   console.log(baseArray, newEl, findName, changeName);
 
-const result = addArray(arr, "Pit", "Ishtvan", "Georg");
-console.log(result);
+//   const newArray = [...baseArray, newEl];
+//   console.log(findName, changeName);
+//   console.log(newArray);
+//   let a = newArray.indexOf(findName);
+//   console.log(a);
+//   if (a >= 0) {
+//     console.log(a);
+//     newArray.splice(a, 1, changeName);
+//   } else {
+//     console.log("nema nixto");
+//   }
+//   return newArray;
+// };
+// const result = addArray(arr, "Pit", "Ishtvan", "Georg");
+// console.log(result);
 
 // Створити обєкт піци з полями і методами
 // В обєкті має бути такі поля і методи:
@@ -51,92 +51,92 @@ console.log(result);
 // метод вибору розміру піци (Розмір піци можна змінити в будь-який момент)
 // метод що показує час приготуванни в хвилинах в залежності від складності піци
 // Метод валідації піци який поверне true якщо піца відповідає вимогам , а саме (вибраний розмір піци, є мінімум одна добавка, і мінімум один соус) інакше false (І виводить строку чого не вистачає (коржа, добавки, чи соусу)) (використовувати this)
-const SIZES = {
-  BIG: { price: 25, cal: 100, time: 15 },
-  SMALL: { price: 15, cal: 50, time: 7 },
-  MEDIUM: { price: 15, cal: 50, time: 7 },
-};
-const STUFFING = {
-  CHEESE: { price: 6.5, cal: 45, time: 2 },
-  BEACON: { price: 10, cal: 70, time: 6 },
-  TOMATO: { price: 12.1, cal: 4, time: 5 },
-  CHICKEN: { price: 9.3, cal: 30, time: 5.1 },
-};
-const SAUCES = {
-  MUSTARD: { price: 3, cal: 5, time: 1 },
-  KETCHUP: { price: 4.2, cal: 20, time: 1.5 },
-  BOLOGNESE: { price: 7.5, cal: 50, time: 3 },
-};
-// Створити всі методи і перевірити чи вони працюють
+// const SIZES = {
+//   BIG: { price: 25, cal: 100, time: 15 },
+//   SMALL: { price: 15, cal: 50, time: 7 },
+//   MEDIUM: { price: 15, cal: 50, time: 7 },
+// };
+// const STUFFING = {
+//   CHEESE: { price: 6.5, cal: 45, time: 2 },
+//   BEACON: { price: 10, cal: 70, time: 6 },
+//   TOMATO: { price: 12.1, cal: 4, time: 5 },
+//   CHICKEN: { price: 9.3, cal: 30, time: 5.1 },
+// };
+// const SAUCES = {
+//   MUSTARD: { price: 3, cal: 5, time: 1 },
+//   KETCHUP: { price: 4.2, cal: 20, time: 1.5 },
+//   BOLOGNESE: { price: 7.5, cal: 50, time: 3 },
+// };
+// // Створити всі методи і перевірити чи вони працюють
 
-const pizza = {
-  sizes: SIZES,
-  stuffing: STUFFING,
-  sauces: SAUCES,
-  _pizza: {
-    stuffing: [],
-    sauces: [],
-  },
-  get pizza() {
-    return this._pizza;
-  },
+// const pizza = {
+//   sizes: SIZES,
+//   stuffing: STUFFING,
+//   sauces: SAUCES,
+//   _pizza: {
+//     stuffing: [],
+//     sauces: [],
+//   },
+//   get pizza() {
+//     return this._pizza;
+//   },
 
-  getStuffing(stuffing) {
-    const keys = Object.keys(this.stuffing);
-    for (let key of keys) {
-      if (key.toLowerCase() === stuffing.toLowerCase()) {
-        const { stuffing: myStuffing } = this._pizza;
+//   getStuffing(stuffing) {
+//     const keys = Object.keys(this.stuffing);
+//     for (let key of keys) {
+//       if (key.toLowerCase() === stuffing.toLowerCase()) {
+//         const { stuffing: myStuffing } = this._pizza;
 
-        return stuffing.includes(stuffing)
-          ? `${myStuffing} уже есть`
-          : myStuffing.push(stuffing);
-      }
-    }
-    return this._pizza;
-  },
-  getSauces(sauces) {
-    const keys = Object.keys(this.sauces);
-    for (let key of keys) {
-      const { sauces: mySauce } = this._pizza;
+//         return stuffing.includes(stuffing)
+//           ? `${myStuffing} уже есть`
+//           : myStuffing.push(stuffing);
+//       }
+//     }
+//     return this._pizza;
+//   },
+//   getSauces(sauces) {
+//     const keys = Object.keys(this.sauces);
+//     for (let key of keys) {
+//       const { sauces: mySauce } = this._pizza;
 
-      if (key.toLowerCase() === sauces.toLowerCase())
-        return mySauce.includes(sauces)
-          ? `${sauces} уже есть`
-          : mySauce.push(sauces);
-    }
-    return this._pizza;
-  },
-  removeStuffing(stuffing) {
-    stuffing = stuffing.toLowerCase();
+//       if (key.toLowerCase() === sauces.toLowerCase())
+//         return mySauce.includes(sauces)
+//           ? `${sauces} уже есть`
+//           : mySauce.push(sauces);
+//     }
+//     return this._pizza;
+//   },
+//   removeStuffing(stuffing) {
+//     stuffing = stuffing.toLowerCase();
 
-    const { stuffing: myStuffing } = this._pizza;
+//     const { stuffing: myStuffing } = this._pizza;
 
-    for (let i = 0; i < myStuffing.length; i++) {
-      let stuff = myStuffing[i].toLowerCase();
-      console.log(stuff);
-      if (stuff === stuffing) {
-        myStuffing.splice(i, 1);
-      }
-    }
-    return this._pizza;
-  },
-  removeSauces(sauces) {
-    sauces = sauces.toLowerCase();
-    console.log(this._pizza.sauces);
+//     for (let i = 0; i < myStuffing.length; i++) {
+//       let stuff = myStuffing[i].toLowerCase();
+//       console.log(stuff);
+//       if (stuff === stuffing) {
+//         myStuffing.splice(i, 1);
+//       }
+//     }
+//     return this._pizza;
+//   },
+//   removeSauces(sauces) {
+//     sauces = sauces.toLowerCase();
+//     console.log(this._pizza.sauces);
 
-    const { sauces: mySauces } = this._pizza;
+//     const { sauces: mySauces } = this._pizza;
 
-    for (let i = 0; i < this._pizza.sauces.length; i += 1) {
-      console.log(mySauces[i]);
-      let sauce = mySauces[i].toLowerCase();
-      if (sauce === sauces) {
-        mySauces.splice(i, 1);
-      }
-    }
-    // console.log(this._pizza);
-    return this._pizza;
-  },
-};
-pizza.getSauces("MUSTARD");
-pizza.removeSauces("MUSTARD");
-console.log(pizza.pizza);
+//     for (let i = 0; i < this._pizza.sauces.length; i += 1) {
+//       console.log(mySauces[i]);
+//       let sauce = mySauces[i].toLowerCase();
+//       if (sauce === sauces) {
+//         mySauces.splice(i, 1);
+//       }
+//     }
+//     // console.log(this._pizza);
+//     return this._pizza;
+//   },
+// };
+// pizza.getSauces("MUSTARD");
+// pizza.removeSauces("MUSTARD");
+// console.log(pizza.pizza);
