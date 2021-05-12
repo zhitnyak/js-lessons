@@ -67,7 +67,7 @@
 // console.log(storage.getItems()); // ["Нанитоиды", "Пролонгер", "Антигравитатор", "Дроид"]
 // storage.removeItem("Пролонгер");
 
-//-------4-7-----
+//-------5-7-----
 // function StringBuilder(baseValue) {
 //   this.value = baseValue;
 // }
@@ -135,7 +135,7 @@
 // storage.removeItem("Пролонгер");
 // console.log(storage.getItems()); // ["Нанитоиды", "Антигравитатор", "Дроид"]
 
-//----15-19----
+//----5-16----
 class Car {
   // Пиши код ниже этой строки
   static MAX_PRICE = 50000;
