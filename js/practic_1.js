@@ -1,21 +1,21 @@
-// let value = 0;
-// let toString = String (value);
-// console.log (toString, typeof (toString));
+let value = 0;
+// let toString = String(value);
+// console.log(toString, typeof toString);
 
-// toString = value + '';
-// console.log (toString);
+// toString = value + "";
+// console.log(toString);
 
-// value = 'qewwt';
+// value = "qewwt";
 // let toNumber = Number(value);
 // console.log(toNumber);
 // toNumber = +value;
 // console.log(toNumber);
 
-// value = '456' ;
+// value = "456";
 // toNumber = parseInt(value);
 // console.log(toNumber);
 
-// value = '' ;
+// value = "";
 // console.log(Number(value));
 // let value = 1;
 // value = " ";
@@ -50,8 +50,17 @@
 // value = 0;
 // console.log(Boolean(value));
 
-// // value = 1;
-// // console.log(Boolean(value));
+// value = 1;
+// console.log(Boolean(value));
+
+const object1 = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+console.log(Object.getOwnPropertyNames(object1));
+// expected output: Array ["a", "b", "c"]
 
 // value = NaN;
 // console.log(Boolean(value));
@@ -191,23 +200,23 @@
 
 //______написать программу, которая будет +-*/2 значения, ктрый пользоватеь ввдит через промпт___
 
-function getTotal() {
-  let num1 = Number(prompt("введите число 1"));
-  let num2 = Number(prompt("введите число 2"));
-  let symbol = prompt("введите оператор");
-  if (symbol === "+") {
-    console.log(num1 + num2);
-  } else if (symbol === "-") {
-    console.log(num1 - num2);
-  } else if (symbol === "*") {
-    console.log(num1 * num2);
-  } else if (symbol === "/") {
-    console.log(num1 / num2);
-  } else {
-    console.log("вы ввели неверный символ");
-  }
-}
-getTotal();
+// function getTotal() {
+//   let num1 = Number(prompt("введите число 1"));
+//   let num2 = Number(prompt("введите число 2"));
+//   let symbol = prompt("введите оператор");
+//   if (symbol === "+") {
+//     console.log(num1 + num2);
+//   } else if (symbol === "-") {
+//     console.log(num1 - num2);
+//   } else if (symbol === "*") {
+//     console.log(num1 * num2);
+//   } else if (symbol === "/") {
+//     console.log(num1 / num2);
+//   } else {
+//     console.log("вы ввели неверный символ");
+//   }
+// }
+// getTotal();
 
 //____температуру из С в F___
 

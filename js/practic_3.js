@@ -76,58 +76,59 @@
 
 /*----------------------------------------*/
 
-// const dish = {
-//   name: "Цезарь",
-//   products: ["курица", "сыр", "салат"],
+const dish = {
+  name: "Цезарь",
+  products: ["курица", "сыр", "салат"],
 
-//   updateProduct(product, newProduct) {
-//     // for (let i = 0; i < this.products.length; i += 1) {
-//     //   if (product === this.products[i]) {
-//     //     this.products[i] = newProduct;
-//     //   }
-//     // }
-//     for (let item of this.products) {
-//       if (item === product) {
-//         const index = this.products.indexOf(item);
-//         this.products[index] = newProduct;
-//       }
-//     }
-//     return this.products;
-//   },
+  updateProduct(product, newProduct) {
+    for (let i = 0; i < this.products.length; i += 1) {
+      if (product === this.products[i]) {
+        this.products[i] = newProduct;
+      }
+      console.log(newProduct);
+    }
+    // for (let item of this.products) {
+    //   if (item === product) {
+    //     const index = this.products.indexOf(item);
+    //     this.products[index] = newProduct;
+    //   }
+    // }
+    return this.products;
+  },
 
-//   addProduct(...newProduct) {
-//     console.log(newProduct);
-//     this.products.push(...newProduct);
-//   },
+  addProduct(...newProduct) {
+    console.log(newProduct);
+    this.products.push(...newProduct);
+  },
 
-//   removeProduct(product) {
-//     for (let i = 0; i <= this.products.length; i += 1) {
-//       if (this.products[i] === product) {
-//         this.products.splice(i, 1);
-//       }
-//     }
-//   },
-// };
+  removeProduct(product) {
+    for (let i = 0; i <= this.products.length; i += 1) {
+      if (this.products[i] === product) {
+        this.products.splice(i, 1);
+      }
+    }
+  },
+};
 
-// dish.updateProduct("курица", "лосось");
-// dish.addProduct("помидоры");
-// console.log(dish);
-// dish.removeProduct("помидоры");
-// console.log(dish);
+dish.updateProduct("курица", "лосось");
+dish.addProduct("помидоры");
+console.log(dish);
+dish.removeProduct("помидоры");
+console.log(dish);
 
-// const dish2 = {
-//   name: "Georgian",
-//   products: [],
-// };
+const dish2 = {
+  name: "Georgian",
+  products: [],
+};
 
-// dish.addProduct.call(dish2, "tomato", "nuts");
-// console.log(dish2);
+dish.addProduct.call(dish2, "tomato", "nuts");
+console.log(dish2);
 
-// const y = ["tomato", "cherry"];
-// dish.updateProduct.call(dish2, ...y);
-// const z = ["nuts", "cucumbers"];
-// dish.updateProduct.apply(dish2, z);
-// console.log(dish2);
+const y = ["tomato", "cherry"];
+dish.updateProduct.call(dish2, ...y);
+const z = ["nuts", "cucumbers"];
+dish.updateProduct.apply(dish2, z);
+console.log(dish2);
 
 //==========
 // const newObject3 = {
