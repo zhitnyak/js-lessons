@@ -369,9 +369,33 @@ const users = [
 // console.log(getSortedFriends(users));
 
 //======6-44=======
-const getTotalBalanceByGender = (users, gender) =>
-  [...users]
-    .filter((user) => user.gender === gender)
-    .reduce((total, user) => total + user.balance, 0);
-console.log(getTotalBalanceByGender(users, "male"));
-console.log(getTotalBalanceByGender(users, "female"));
+// const getTotalBalanceByGender = (users, gender) =>
+//   [...users]
+//     .filter((user) => user.gender === gender)
+//     .reduce((total, user) => total + user.balance, 0);
+// console.log(getTotalBalanceByGender(users, "male"));
+// console.log(getTotalBalanceByGender(users, "female"));
+
+// let arr = [1, 2, 3, 4, 5];
+// let result = arr.filter(function (el) {
+//   return el % 2;
+// });
+// console.log(result);
+
+// var x = 7;
+// // console.log(++x);
+// console.log(x++);
+// console.log(x);
+
+// x = 0.1 + 0.2 - 0.2 !== 0.1;
+// console.log(x);
+
+// Change code below this line
+function add(a, b, c) {
+  console.log(`Addition result equals ${a + b + c}`);
+  // Change code above this line
+}
+
+add(15, 27, 10);
+add(10, 20, 30);
+add(5, 10, 15);

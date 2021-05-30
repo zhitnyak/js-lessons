@@ -185,4 +185,32 @@ function includes(array, value) {
   return false;
   // Пиши код выше этой строки
 }
-ы;
+function getDiscount(totalSpent) {
+  const BASE_DISCOUNT = 0;
+  const BRONZE_DISCOUNT = 0.02;
+  const SILVER_DISCOUNT = 0.05;
+  const GOLD_DISCOUNT = 0.1;
+  let discount;
+  // Change code below this line
+  if (totalSpent >= 50000) {
+    return GOLD_DISCOUNT;
+  } else if (totalSpent >= 20000 && totalSpent < 50000) {
+    return SILVER_DISCOUNT;
+  }
+  // Change code above this line
+  return discount;
+}
+
+function getShippingCost(country) {
+  let message;
+  // Change code below this line
+  switch (country) {
+    case "China":
+      message = `Shipping to ${country} will cost 100 credits`;
+      break;
+    default:
+      message = "Sorry, there is no delivery to your country";
+  }
+  // Change code above this line
+  return message;
+}
